@@ -2,6 +2,7 @@
 public class AVLTree {
 
     public class Node extends AVLTree {
+
         int orderID;
         String title;
         Node left, right;
@@ -92,7 +93,7 @@ public class AVLTree {
             return "Order not found";
         }
         if (orderID < x.orderID) {
-            return search(x.left, orderID); 
+            return search(x.left, orderID);
         } else if (orderID > x.orderID) {
             return search(x.right, orderID);
         } else {
@@ -103,7 +104,7 @@ public class AVLTree {
     private Node minValueNode(Node x) {
         Node current = x;
         while (current.left != null) {
-            current = current.left; 
+            current = current.left;
         }
         return current;
     }
@@ -141,21 +142,20 @@ public class AVLTree {
         }
         x.height = max(height(x.left), height(x.right)) + 1;
         updateHeight(x);
-
         return rebalance(x);
     }
-    
-    public int updateHeight(Node x) {
-		if (x == null) {
-			return -1;
-		} else {
-			x.height = 1 + Math.max(updateHeight(x.left), updateHeight(x.right));
-		}
-		return x.height;
-	}
 
-    public Node rebalance(Node x){
-                int balance = getBalance(x);
+    public int updateHeight(Node x) {
+        if (x == null) {
+            return -1;
+        } else {
+            x.height = 1 + Math.max(updateHeight(x.left), updateHeight(x.right));
+        }
+        return x.height;
+    }
+
+    public Node rebalance(Node x) {
+        int balance = getBalance(x);
 
         if (balance > 1 && getBalance(x.left) >= 0) {
             return rightRotate(x);
@@ -177,6 +177,7 @@ public class AVLTree {
 
         return x;
     }
+
     public Node findOldestOrder(Node x) {
         return minValueNode(x);
     }

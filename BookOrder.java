@@ -15,7 +15,6 @@ public class BookOrder extends AVLTree {
         return 1 + countNodes(x.left) + countNodes(x.right);
     }
 
-    // Function to calculate the maximum height of the AVL Tree
     private static int calculateHeight(AVLTree.Node x) {
         return (int) Math.ceil(Math.log(countNodes(x) + 1) / Math.log(2));
     }
