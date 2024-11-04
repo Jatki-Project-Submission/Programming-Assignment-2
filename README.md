@@ -22,5 +22,19 @@ The **Programming-Assignment-2** reads book orders from a CSV file and stores th
 - **Java Development Kit (JDK)** - Ensure Java 8 or above is installed.
 - **IDE (Optional)** - You can use any Java IDE like Eclipse, IntelliJ, or Visual Studio Code.
 
-### Steps
+## Usage 
 
+After running the program, you will see a menu with the following options:
+1. Manually add a book order
+2. Manually remove a book order
+3. Print an In-Order list of book titles by order ID
+4. Find the name of the book for a specific order number
+5. Find the oldest book order
+6. Find the latest book order
+7. Exit the program
+Type the number action you wish to execute and follow the prompts.
+
+## Technologies Used
+ **Java** - Main programming language
+ **AVL Tree** - Self-balancing binary search tree structure to ensure efficient order management
+ **CSV File Parsing** - Used to load initial book orders from a file
