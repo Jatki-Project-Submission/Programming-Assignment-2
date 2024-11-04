@@ -63,7 +63,7 @@ public class AVLTree {
     // Function to insert a new order into the AVL tree
     public Node insert(Node x, int orderID, String title) {
         if (x == null) {
-            return (new Node(orderID, title)); // Create a new node if position is found
+            return (new Node(orderID, title)); // Create a new node if position is not found
         }
         // Insert in the left subtree if orderID is smaller
         if (orderID < x.orderID) {
